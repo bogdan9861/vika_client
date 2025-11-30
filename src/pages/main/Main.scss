@@ -1,0 +1,175 @@
+/* main-page.scss */
+.main-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1f1f1f;
+  color: #222;
+}
+
+.slider {
+  margin-top: 100px;
+  background: #272727;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    &--left {
+      left: 20px;
+    }
+    &--right {
+      right: 20px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 17px;
+    opacity: 0.9;
+    max-width: 100%;
+    word-break: break-all;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+  }
+
+  &__content {
+    margin-left: 40px;
+    max-width: 50%;
+  }
+
+  &__img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 30px;
+  }
+}
+
+.cards {
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.character-block {
+  background: #272727;
+  padding: 48px 24px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+  border: 2px solid #ca9569;
+
+  &__image {
+    width: 260px;
+    height: 260px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &__name {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
+  &__bio {
+    font-size: 18px;
+    color: #fff;
+    max-width: 500px;
+    word-break: break-all;
+  }
+}
+
+/* Card.scss */
+.card {
+  background: #272727;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  border: 2px solid #ca9569;
+}
+
+.card-content {
+  padding: 20px;
+  color: #fff;
+}
+
+/* Button.scss */
+.button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #ca9569;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  transition: 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.dark {
+  background-color: #3b2c2c;
+  color: #fff;
+}
+
+.outline {
+  border: 2px solid #ca9569;
+}
+
+.user {
+  &__profile {
+    margin-right: 100px;
+    color: #fff;
+  }
+
+  &__name {
+    color: #fff;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 21px;
+    margin-right: 20px;
+  }
+}

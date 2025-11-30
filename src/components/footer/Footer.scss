@@ -1,0 +1,39 @@
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 48px 24px;
+  margin-top: auto;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  &__links a {
+    display: block;
+    margin-bottom: 6px;
+    transition: 0.2s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__social a {
+    margin-right: 20px;
+    font-size: 20px;
+    transition: 0.2s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
