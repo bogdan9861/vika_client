@@ -3,8 +3,10 @@ import api from "./api";
 
 const token = localStorage.getItem("vika_token");
 
+const BASE_API = "https://vika-server.onrender.com/api";
+
 export const createCharacter = async (data) => {
-  const res = await axios.post("http://localhost:8080/api/items", data, {
+  const res = await axios.post(`${BASE_API}/items`, data, {
     headers: {
       Authorization: `Bearear: ${token}`,
       "Content-Type": "multipart/form-data",
@@ -15,7 +17,7 @@ export const createCharacter = async (data) => {
 };
 
 export const editCharacter = async (data) => {
-  const res = await axios.put("http://localhost:8080/api/items", data, {
+  const res = await axios.put(`${BASE_API}/items`, data, {
     headers: {
       Authorization: `Bearear: ${token}`,
       "Content-Type": "multipart/form-data",
